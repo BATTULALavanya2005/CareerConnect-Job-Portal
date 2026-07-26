@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+        <img src="images/careerconnect-logo.png" 
+             alt="CareerConnect Logo">
+    </div>
+
+    <ul>
+
+        <li>
+            <a href="dashboard.html">Home</a>
+        </li>
+
+        <li>
+            <a href="jobs.html">Jobs</a>
+        </li>
+
+        <li>
+            <a href="applications.html">Applications</a>
+        </li>
+
+        <li>
+            <a href="profile.html">Profile</a>
+        </li>
+
+        <li>
+            <a href="#" onclick="logout()">Logout</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+<div class="main">
+
+<div class="hero">
+
+    <h1 id="welcomeText">
+      Welcome User
+    </h1>
+
+    <p>
+        Search jobs, internships and work opportunities
+    </p>
+
+    <div class="quick-actions">
+
+      <button onclick="window.location.href='jobs.html'">
+        🔍 Browse Jobs
+      </button>
+
+      <button onclick="window.location.href='applications.html'">
+        📄 My Applications
+      </button>
+
+    </div>
+
+</div>
+
+<div class="profile-progress-card">
+
+    <div class="progress-header">
+        <h3>Profile Completion</h3>
+        <span id="profileCompletion">0%</span>
+    </div>
+
+    <div class="progress-bar">
+        <div id="progressFill" class="progress-fill"></div>
+    </div>
+
+    <p class="progress-text">
+        Complete your profile to attract recruiters.
+    </p>
+
+</div>
+
+<div class="dashboard-stats">
+
+    <div class="dashboard-card">
+        <h3>📄 Applications</h3>
+        <h2 id="dashboardApplications">0</h2>
+        <p>Applications Submitted</p>
+    </div>
+
+    <div class="dashboard-card">
+        <h3>💬 Interviews</h3>
+        <h2>0</h2>
+        <p>Interviews Scheduled</p>
+    </div>
+
+    <div class="dashboard-card">
+        <h3>🔖 Saved Jobs</h3>
+        <h2 id="savedJobsCount">0</h2>
+        <p>Saved Opportunities</p>
+    </div>
+
+    <div class="dashboard-card">
+        <h3>🏆 Offers</h3>
+        <h2>0</h2>
+        <p>Offers Received</p>
+    </div>
+
+</div>
+<h2>Application Analytics</h2>
+
+<div class="analytics">
+
+    <div class="chart-card">
+      <h3>Applications Sent</h3>
+      <canvas id="applicationsChart"></canvas>
+    </div>
+
+   <div class="chart-card">
+     <h3>Application Status</h3>
+     <canvas id="statusChart"></canvas>
+   </div>
+
+</div>
+
+<h2>Popular Categories</h2>
+
+<div class="categories">
+
+    <div class="category-card">
+        💻 Software Jobs
+    </div>
+
+    <div class="category-card">
+        🎓 Internships
+    </div>
+
+    <div class="category-card">
+        🏠 Work From Home
+    </div>
+
+    <div class="category-card">
+        🏛 Government Jobs
+    </div>
+
+    <div class="category-card">
+        ⏰ Part-Time Jobs
+    </div>
+
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="dashboard.js"></script>
+
+
+</body>
+</html>

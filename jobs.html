@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jobs</title>
+<link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+
+    <div class="logo">
+    <img src="images/careerconnect-logo.png" alt="CareerConnect Logo">
+</div>
+
+    <ul>
+        <li><a href="dashboard.html">Home</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="applications.html">Applications</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="#" onclick="logout()">Logout</a></li>
+    </ul>
+
+</nav>
+
+<!-- Main Content -->
+<div class="main">
+
+    <!-- Hero Section -->
+    <div class="hero">
+
+        <h1>Find Your Dream Job</h1>
+
+        <p>
+            Search jobs and internships from top companies
+        </p>
+
+        <div class="search-box">
+
+            <input
+              type="text"
+              id="searchJob"
+              placeholder="Search Job Title, Company, Skills">
+
+           <button class="search-btn" onclick="searchJobs()">
+                 Search Jobs
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Categories -->
+    <h2>Jobs For You</h2>
+
+    <div class="categories">
+
+    <div class="category-card"
+     onclick="window.location.href='software-jobs.html'">
+    💻 Software Jobs
+    </div>
+
+    <div class="category-card"
+     onclick="window.location.href='internships.html'">
+    🎓 Internships
+    </div>
+
+    <div class="category-card"
+     onclick="window.location.href='workfromhome.html'">
+    🏠 Work From Home
+    </div>
+
+    <div class="category-card"
+     onclick="window.location.href='government-jobs.html'">
+    🏛 Government Jobs
+    </div>
+
+    <div class="category-card"
+     onclick="window.location.href='parttime-jobs.html'">
+    ⏰ Part-Time Jobs
+    </div>
+
+
+ </div>
+
+    <!-- Featured Jobs -->
+    <div id="jobsContainer" style="display:none;">
+
+    <h2 style="margin-top:40px;">
+        Featured Jobs
+    </h2>
+
+    <div class="stats">
+
+    <!-- Software Jobs -->
+
+    <div class="card">
+        <h3>💻 Frontend Developer</h3>
+        <p><strong>Company:</strong> Infosys</p>
+        <p><strong>Location:</strong> Bangalore</p>
+        <p><strong>Salary:</strong> ₹6 LPA</p>
+
+        <div class="job-actions">
+            <button class="apply-btn" onclick="applyJob('Frontend Developer')">
+                Apply Now
+            </button>
+
+            <button class="save-btn-job" onclick="saveJob('Frontend Developer')">
+                Save
+            </button>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>💻 Java Developer</h3>
+        <p><strong>Company:</strong> TCS</p>
+        <p><strong>Location:</strong> Hyderabad</p>
+        <p><strong>Salary:</strong> ₹5 LPA</p>
+
+        <div class="job-actions">
+            <button class="apply-btn" onclick="applyJob('Java Developer')">
+                Apply Now
+            </button>
+
+            <button class="save-btn-job" onclick="saveJob('Java Developer')">
+                Save
+            </button>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>💻 Python Developer</h3>
+        <p><strong>Company:</strong> Wipro</p>
+        <p><strong>Location:</strong> Chennai</p>
+        <p><strong>Salary:</strong> ₹5.5 LPA</p>
+
+        <div class="job-actions">
+            <button class="apply-btn" onclick="applyJob('Python Developer')">
+                Apply Now
+            </button>
+
+            <button class="save-btn-job" onclick="saveJob('Python Developer')">
+                Save
+            </button>
+        </div>
+    </div>
+
+    <!-- Internship -->
+
+    <div class="card">
+        <h3>🎓 Web Development Intern</h3>
+        <p><strong>Company:</strong> Internshala</p>
+        <p><strong>Duration:</strong> 3 Months</p>
+        <p><strong>Stipend:</strong> ₹10,000/month</p>
+
+        <div class="job-actions">
+            <button class="apply-btn" onclick="applyJob('Web Development Intern')">
+                Apply Now
+            </button>
+
+            <button class="save-btn-job" onclick="saveJob('Web Development Intern')">
+                Save
+            </button>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>🎓 Java Intern</h3>
+        <p><strong>Company:</strong> TCS</p>
+        <p><strong>Duration:</strong> 2 Months</p>
+        <p><strong>Stipend:</strong> ₹12,000/month</p>
+
+        <div class="job-actions">
+            <button class="apply-btn" onclick="applyJob('Java Intern')">
+                Apply Now
+            </button>
+
+            <button class="save-btn-job" onclick="saveJob('Java Intern')">
+                Save
+            </button>
+        </div>
+    </div>
+
+    <!-- Work From Home -->
+
+    <div class="card">
+        <h3>🏠 Remote React Developer</h3>
+        <p><strong>Company:</strong> Accenture</p>
+        <p><strong>Location:</strong> Work From Home</p>
+        <p><strong>Salary:</strong> ₹8 LPA</p>
+
+        <div class="job-actions">
+            <button class="apply-btn" onclick="applyJob('Remote React Developer')">
+                Apply Now
+            </button>
+
+            <button class="save-btn-job" onclick="saveJob('Remote React Developer')">
+                Save
+            </button>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>🏠 Remote Python Developer</h3>
+        <p><strong>Company:</strong> Infosys</p>
+        <p><strong>Location:</strong> Work From Home</p>
+        <p><strong>Salary:</strong> ₹7 LPA</p>
+
+        <div class="job-actions">
+            <button class="apply-btn" onclick="applyJob('Remote Python Developer')">
+                Apply Now
+            </button>
+
+            <button class="save-btn-job" onclick="saveJob('Remote Python Developer')">
+                Save
+            </button>
+        </div>
+    </div>
+
+    <!-- Government Jobs -->
+
+    <div class="card">
+        <h3>🏛 SSC Junior Engineer</h3>
+        <p><strong>Department:</strong> SSC</p>
+        <p><strong>Location:</strong> India</p>
+        <p><strong>Salary:</strong> ₹45,000/month</p>
+
+        <div class="job-actions">
+            <button class="apply-btn" onclick="applyJob('SSC Junior Engineer')">
+                Apply Now
+            </button>
+
+            <button class="save-btn-job" onclick="saveJob('SSC Junior Engineer')">
+                Save
+            </button>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>🏛 Bank PO</h3>
+        <p><strong>Department:</strong> SBI</p>
+        <p><strong>Location:</strong> India</p>
+        <p><strong>Salary:</strong> ₹50,000/month</p>
+
+        <div class="job-actions">
+            <button class="apply-btn" onclick="applyJob('Bank PO')">
+                Apply Now
+            </button>
+
+            <button class="save-btn-job" onclick="saveJob('Bank PO')">
+                Save
+            </button>
+        </div>
+    </div>
+
+    <!-- Part-Time -->
+
+    <div class="card">
+        <h3>⏰ Part-Time Data Entry</h3>
+        <p><strong>Company:</strong> Freelancer Hub</p>
+        <p><strong>Location:</strong> Remote</p>
+        <p><strong>Salary:</strong> ₹15,000/month</p>
+
+        <div class="job-actions">
+            <button class="apply-btn" onclick="applyJob('Part-Time Data Entry')">
+                Apply Now
+            </button>
+
+            <button class="save-btn-job" onclick="saveJob('Part-Time Data Entry')">
+                Save
+            </button>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>⏰ Online Tutor</h3>
+        <p><strong>Company:</strong> Chegg</p>
+        <p><strong>Location:</strong> Remote</p>
+        <p><strong>Salary:</strong> ₹20,000/month</p>
+
+        <div class="job-actions">
+            <button class="apply-btn" onclick="applyJob('Online Tutor')">
+                Apply Now
+            </button>
+
+            <button class="save-btn-job" onclick="saveJob('Online Tutor')">
+                Save
+            </button>
+        </div>
+    </div>
+
+</div>
+
+</div>
+
+<script src="dashboard.js"></script>
+<script>
+
+window.onload = function(){
+
+    const search =
+        localStorage.getItem("jobSearch");
+
+    if(search){
+
+        document.getElementById("searchJob").value =
+            search;
+
+        searchJobs();
+
+        localStorage.removeItem(
+            "jobSearch"
+        );
+
+    }
+
+};
+
+</script>
+
+</body>
+</html>

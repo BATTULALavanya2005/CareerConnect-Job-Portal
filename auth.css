@@ -1,0 +1,197 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    position:relative;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(
+        180deg,
+        #2563eb 40%,
+        #e5e7eb 40%
+    );
+}
+
+/* Main Container */
+
+.container{
+    width:900px;
+    min-height:500px;
+    background:white;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    display:flex;
+    overflow:hidden;
+    margin-top:80px;
+}
+
+
+/* Left Side - Form */
+
+.left-section{
+    width:50%;
+    padding:50px;
+}
+
+.left-section h4{
+    color:#6b7280;
+    margin-bottom:10px;
+    font-size:16px;
+}
+
+.left-section h1{
+    color:#111827;
+    font-size:36px;
+    margin-bottom:30px;
+}
+
+.left-section input{
+    width:100%;
+    padding:14px;
+    margin:10px 0;
+    border:1px solid #d1d5db;
+    border-radius:8px;
+    font-size:15px;
+}
+
+.left-section input:focus{
+    outline:none;
+    border-color:#2563eb;
+}
+
+
+/* Button */
+
+.left-section button{
+    width:100%;
+    padding:14px;
+    margin-top:20px;
+    border:none;
+    border-radius:8px;
+    background:#f59e0b;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.left-section button:hover{
+    background:#d97706;
+}
+
+
+/* Login/Signup Link */
+
+.left-section p{
+    text-align:center;
+    margin-top:20px;
+    color:#4b5563;
+}
+
+.left-section a{
+    color:#2563eb;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+
+/* Right Side */
+
+.right-section{
+    width:50%;
+    background:#f9fafb;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+    text-align:center;
+}
+
+.right-section h2{
+    color:#111827;
+    font-size:28px;
+    margin-bottom:25px;
+    line-height:1.3;
+}
+
+.right-section img{
+    width:280px;
+    max-width:100%;
+}
+
+
+/* Responsive Design */
+
+@media(max-width:768px){
+
+    body{
+        padding:20px;
+    }
+
+    .container{
+        width:100%;
+        flex-direction:column;
+    }
+
+    .left-section,
+    .right-section{
+        width:100%;
+    }
+
+    .left-section{
+        padding:35px;
+    }
+
+    .right-section{
+        padding:30px;
+    }
+
+    .right-section img{
+        width:220px;
+    }
+
+}
+.right-panel{
+    width:50%;
+    background:#f8fafc;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+    text-align:center;
+}
+
+.right-panel h2{
+    font-size:32px;
+    color:#0f172a;
+    margin-bottom:25px;
+    line-height:1.3;
+}
+
+.right-panel img{
+    width:90%;
+    max-width:350px;
+    height:auto;
+}
+/* Top Left CareerConnect Logo */
+
+.page-logo{
+    position:absolute;
+    top:20px;
+    left:20px;
+    z-index:1000;
+}
+
+.page-logo img{
+    width:350px;
+    height:auto;
+}

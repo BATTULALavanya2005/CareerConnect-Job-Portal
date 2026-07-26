@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+    <img src="images/careerconnect-logo.png" alt="CareerConnect Logo">
+</div>
+
+    <ul>
+        <li><a href="dashboard.html">Home</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="applications.html">Applications</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="#" onclick="logout()">Logout</a></li>
+    </ul>
+
+</nav>
+
+<div class="main">
+
+    <h1>My Profile</h1>
+
+    <div class="card profile-header">
+
+    <div class="profile-pic-container">
+
+        <img
+          id="profileImage"
+          src="profile-default.png"
+          alt=""
+          class="profile-pic">
+
+        <span class="profile-text">
+            <p>Upload</p>
+            <p>Photo</p> 
+        </span>
+
+    </div>
+
+    <h3 id="userName">Loading...</h3>
+
+    <p id="userEmail">Loading...</p>
+
+    <label for="profilePicUpload" class="upload-btn">
+        Change Profile Picture
+    </label>
+
+    <input
+        type="file"
+        id="profilePicUpload"
+        accept="image/*"
+        hidden>
+
+</div>
+
+
+    <div class="card">
+      <h3>Full Name</h3>
+      <input 
+    type="text" 
+    id="fullNameText"
+    placeholder="Enter your full name">
+   </div>
+
+   <div class="card">
+     <h3>Email</h3>
+     <input 
+    type="email" 
+    id="emailText"
+    placeholder="Enter your email address">
+   </div>
+
+    <div class="card">
+        <h3>Phone Number</h3>
+        <input
+         type="tel"
+         id="userPhone"
+         placeholder="Enter Phone Number">
+    </div>
+
+    <!-- Education -->
+
+<!-- Education -->
+
+<div class="card">
+    <h3>Educational Background</h3>
+
+    <!-- 10th -->
+    <h4>10th Standard</h4>
+
+    <input 
+        type="text" 
+        id="school10"
+        placeholder="School Name">
+
+    <input 
+        type="text" 
+        id="board10"
+        placeholder="Board (CBSE / State Board / ICSE)">
+
+    <input 
+        type="text" 
+        id="percentage10"
+        placeholder="Percentage / CGPA">
+
+    <input 
+        type="number" 
+        id="passingYear10"
+        placeholder="Passing Year">
+
+
+    <!-- 12th -->
+    <h4>12th Standard / Intermediate</h4>
+
+    <input 
+        type="text" 
+        id="college12"
+        placeholder="School / Junior College Name">
+
+    <input 
+        type="text" 
+        id="board12"
+        placeholder="Board (CBSE / State Board / ISC)">
+
+    <input 
+        type="text" 
+        id="percentage12"
+        placeholder="Percentage / CGPA">
+
+    <input 
+        type="number" 
+        id="passingYear12"
+        placeholder="Passing Year">
+
+
+    <!-- Degree -->
+    <h4>Higher Education</h4>
+
+    <select id="degreeType">
+        <option value="">
+            Select Degree Type
+        </option>
+        <option>
+            Undergraduate
+        </option>
+        <option>
+            Graduate
+        </option>
+        <option>
+            Postgraduate
+        </option>
+    </select>
+
+    <input 
+        type="text"
+        id="degreeName"
+        placeholder="Degree Name (B.Tech, B.Sc, MBA, M.Tech, etc.)">
+
+    <input 
+        type="text"
+        id="universityName"
+        placeholder="University / College Name">
+
+    <input 
+        type="text"
+        id="degreePercentage"
+        placeholder="CGPA / Percentage">
+
+    <input 
+        type="number"
+        id="degreeYear"
+        placeholder="Year of Graduation">
+</div>
+
+
+<!-- Skills -->
+
+<div class="card">
+    <h3>Professional Skills</h3>
+
+    <label>Technical Skills</label>
+    <textarea 
+    id="technicalSkills"
+    maxlength="500"
+    placeholder="Programming Languages, Web Technologies, Databases, Tools">
+   </textarea>
+
+    <label>Soft Skills</label>
+    <textarea id="softSkills"
+        placeholder="Communication, Teamwork, Leadership, Problem Solving">
+    </textarea>
+</div>
+
+
+<!-- Professional Experience -->
+
+<div class="card">
+    <h3>Professional Experience</h3>
+
+    <!-- Internship -->
+    <h4>Internship Experience</h4>
+
+    <input 
+        type="text"
+        id="internCompany"
+        placeholder="Company Name">
+
+    <input 
+        type="text"
+        id="internRole"
+        placeholder="Internship Role (Software Developer Intern, Data Analyst Intern, etc.)">
+
+    <input 
+        type="text"
+        id="internDuration"
+        placeholder="Duration (Jan 2025 - Mar 2025)">
+
+    <textarea 
+        id="internResponsibilities"
+        placeholder="Responsibilities, Projects worked on, Technologies used">
+    </textarea>
+
+
+    <!-- Job Experience -->
+    <h4>Work Experience</h4>
+
+    <input 
+        type="text"
+        id="jobCompany"
+        placeholder="Company Name">
+
+    <input 
+        type="text"
+        id="jobRole"
+        placeholder="Job Role (Software Engineer, Manager, etc.)">
+
+    <input 
+        type="text"
+        id="jobDuration"
+        placeholder="Duration (June 2025 - Present)">
+
+    <textarea 
+        id="jobResponsibilities"
+        placeholder="Key responsibilities, Achievements, Projects handled">
+    </textarea>
+
+</div>
+
+    <div class="card">
+
+      <h3>Career Objective</h3>
+
+      <textarea
+        id="careerObjective"
+        placeholder="Write your career objective">
+      </textarea>
+
+    </div>
+
+    <div class="card">
+        <h3>LinkedIn Profile</h3>
+        <input
+          type="url"
+          id="linkedinLink"
+          placeholder="LinkedIn URL">
+    </div>
+
+    <div class="card">
+        <h3>GitHub Profile</h3>
+        <input
+          type="url"
+          id="githubLink"
+          placeholder="GitHub URL">
+    </div>
+
+    <div class="card">
+        <h3>Resume</h3>
+
+        <input
+          type="file"
+          id="resumeUpload"
+          accept=".pdf,.doc,.docx">
+
+        <p id="resumeName">
+            No Resume Uploaded
+        </p>
+
+    </div>
+
+    <div class="card">
+        <h3>Applications Submitted</h3>
+        <p id="applicationCount">0</p>
+    </div>
+    
+    <div style="text-align:center; margin-top:20px;">
+
+      <button
+          class="save-btn"
+          onclick="saveProfile()">
+          Save Profile
+      </button>
+
+    </div>
+
+</div>
+
+<script src="dashboard.js"></script>
+
+
+
+<script>
+
+const profileUser =
+    JSON.parse(localStorage.getItem("user"));
+
+const applications =
+    JSON.parse(localStorage.getItem("applications")) || [];
+
+document.getElementById("applicationCount").textContent =
+    applications.length;
+
+if(profileUser){
+
+    document.getElementById("userName").textContent =
+        profileUser.name || "Not Available";
+
+    document.getElementById("userEmail").textContent =
+        profileUser.email || "Not Available";
+
+    document.getElementById("fullNameText").value =
+    profileUser.name || "";
+
+    document.getElementById("emailText").value =
+    profileUser.email || "";
+
+    document.getElementById("userPhone").value =
+    profileUser.phone || "";
+
+    document.getElementById("userEducation").value =
+    profileUser.education || "";
+
+    document.getElementById("userSkills").value =
+    profileUser.skills || "";
+
+    document.getElementById("userExperience").value =
+    profileUser.experience || "";
+
+    document.getElementById("careerObjective").value =
+    profileUser.careerObjective || "";
+
+    if(profileUser.linkedin){
+        document.getElementById("linkedinLink").value =
+    profileUser.linkedin || "";
+    }
+
+    if(profileUser.github){
+        document.getElementById("githubLink").value =
+    profileUser.github || "";
+    }
+
+}
+else{
+
+    document.getElementById("userName").textContent =
+        "No User Found";
+
+    document.getElementById("userEmail").textContent =
+        "No User Found";
+}
+
+document
+.getElementById("resumeUpload")
+.addEventListener("change", function(){
+
+    if(this.files.length > 0){
+
+        document.getElementById("resumeName")
+        .textContent = this.files[0].name;
+
+        localStorage.setItem(
+            "resumeName",
+            this.files[0].name
+        );
+
+    }
+
+});
+function saveProfile(){
+
+    let user =
+        JSON.parse(localStorage.getItem("user")) || {};
+
+    user.name =
+        document.getElementById("fullNameText").value;
+
+    user.email =
+        document.getElementById("emailText").value;
+
+    user.phone =
+        document.getElementById("userPhone").value;
+
+    user.education =
+        document.getElementById("userEducation").value;
+
+    user.skills =
+        document.getElementById("userSkills").value;
+
+    user.experience =
+        document.getElementById("userExperience").value;
+    
+    user.careerObjective =
+    document.getElementById("careerObjective").value;
+
+    user.linkedin =
+        document.getElementById("linkedinLink").value;
+
+    user.github =
+        document.getElementById("githubLink").value;
+
+    localStorage.setItem(
+        "user",
+        JSON.stringify(user)
+    );
+
+    document.getElementById("userName").textContent =
+        user.name;
+
+    document.getElementById("userEmail").textContent =
+        user.email;
+    
+    alert("Profile Updated Successfully!");
+}
+
+
+
+// PROFILE PICTURE UPLOAD
+document
+.getElementById("profilePicUpload")
+.addEventListener("change", function(){
+
+    const file = this.files[0];
+
+    if(file){
+
+        const reader = new FileReader();
+
+        reader.onload = function(e){
+
+            document.getElementById("profileImage").src =
+                e.target.result;
+
+            document.getElementById("profileImage").style.display =
+                "block";
+
+            document.querySelector(".profile-text").style.display =
+                "none";
+
+            localStorage.setItem(
+                "profileImage",
+                e.target.result
+            );
+        };
+
+        reader.readAsDataURL(file);
+    }
+});
+
+        
+
+
+
+const savedImage = localStorage.getItem("profileImage");
+
+if(savedImage){
+
+    document.getElementById("profileImage").src = savedImage;
+
+    document.getElementById("profileImage").style.display = "block";
+
+    document.querySelector(".profile-text").style.display = "none";
+}else{
+    document.getElementById("profileImage").src = "profile-default.png";
+}
+const savedResume =
+    localStorage.getItem("resumeName");
+
+if(savedResume){
+
+    document.getElementById("resumeName")
+    .textContent = savedResume;
+
+}
+
+</script>
+
+</body>
+</html>
