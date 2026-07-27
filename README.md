@@ -8,6 +8,10 @@ This project is developed using pure HTML, CSS, and JavaScript with browser Loca
 
 ---
 
+## 🌐 Live Demo
+
+🔗 https://battulalavanya2005.github.io/CareerConnect-Job-Portal/
+
 ## 🚀 Features
 
 ### 👤 User Authentication
@@ -61,8 +65,22 @@ This project is developed using pure HTML, CSS, and JavaScript with browser Loca
 - JavaScript (ES6)
 - Browser LocalStorage
 - Chart.js
+- Git
+- GitHub
+- GitHub Pages
 
 ---
+
+## ⭐ Key Highlights
+
+- Responsive Design
+- Interactive Dashboard
+- Dynamic Job Search
+- LocalStorage-based Data Management
+- Job Application Tracking
+- Saved Jobs Feature
+- Profile Completion Indicator
+- Analytics using Chart.js
 
 ## 📂 Project Structure
 
@@ -94,32 +112,33 @@ CareerConnect/
 
 ## ⚙️ Installation & Setup
 
-1. Clone the repository:
+### Clone the Repository
 
 ```bash
-git clone https://github.com/lavanya123/CareerConnect.git
+git clone https://github.com/BATTULALavanya2005/CareerConnect-Job-Portal.git
 ```
 
-2. Navigate to the project folder:
+### Navigate to the project folder
 
 ```bash
-cd CareerConnect
+cd CareerConnect-Job-Portal
 ```
 
-3. Open `dashboard.html` or `careerconnect.html` in your browser.
+### Open the project
 
-No additional dependencies or installation are required.
-
----
+Open `index.html` in your browser or use VS Code Live Server.
 
 ## 💡 Future Enhancements
 
-- Backend integration with databases
-- Recruiter and admin dashboards
-- Real-time job listings using APIs
-- Email notifications for applications
-- AI-based job recommendations
-- Resume parsing and matching system
+- AI Resume Analyzer
+- Resume ATS Score Checker
+- Firebase Authentication
+- Backend using Node.js & Express
+- MongoDB Database
+- Email Notifications
+- Recruiter Dashboard
+- Admin Panel
+- Real-Time Job APIs
 
 ---
 
